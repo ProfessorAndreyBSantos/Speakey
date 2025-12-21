@@ -12984,20 +12984,34 @@ Exemplo de início (Pro-Space): "While it is true that the costs are high, littl
 """
 projetos = [bloco.strip() for bloco in lista_conteudos.split('###') if bloco.strip() != '']
 
+
+
 # ==============================================================================
-# 2. INICIALIZAÇÃO
+# 2. INICIALIZAÇÃO (CORRIGIDA PARA CHROMEBOOK)
 # ==============================================================================
 def get_driver():
-    print("⚙️ Configurando Robô...")
+    print("⚙️ Configurando Robô no Chromebook...")
     options = webdriver.ChromeOptions()
     options.add_experimental_option("detach", True)
+    
+    # Detecção automática de ambiente para definir os caminhos
+    # Se estiver no Linux (Chromebook), usa os caminhos do sistema
+    if os.name == 'posix': 
+        CAMINHO_PERFIL_ROBO = os.path.join(os.getcwd(), "chromebook_profile")
+        options.binary_location = "/usr/bin/chromium"
+        service = Service("/usr/bin/chromedriver") # <--- O PULO DO GATO ESTÁ AQUI
+    else:
+        # Fallback para Windows (caso você rode no PC depois)
+        CAMINHO_PERFIL_ROBO = r"C:\ChromeAutomacao"
+        service = Service(ChromeDriverManager().install())
+
     options.add_argument(f"user-data-dir={CAMINHO_PERFIL_ROBO}")
     options.add_argument("--remote-allow-origins=*")
     options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage") # Essencial para Chromebook
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
 
-    service = Service(ChromeDriverManager().install())
     return webdriver.Chrome(service=service, options=options)
 
 # ==============================================================================
