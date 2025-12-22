@@ -13078,21 +13078,34 @@ def run_automation():
             except Exception as e:
                 print(f"      ❌ Erro no Passo 2: {e}")
 
+
             # ---------------------------------------------------------
-            # PASSO 3: COLAR TEXTO
+            # PASSO 3: COLAR TEXTO (OTIMIZADO COM JAVASCRIPT)
             # Classe: ProseMirror
             # ---------------------------------------------------------
-            print("   📝 Passo 3: Colando texto...")
+            print("    📝 Passo 3: Colando texto (Modo Turbo)...")
             try:
+                # 1. Localiza o editor
                 editor = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".ProseMirror")))
                 editor.click()
-                editor.send_keys(Keys.CONTROL + "a")
-                editor.send_keys(Keys.DELETE)
                 time.sleep(0.5)
-                editor.send_keys(texto_aula)
+
+                # 2. INJEÇÃO DIRETA DE JAVASCRIPT (Instantâneo)
+                # Isso substitui o send_keys que estava travando seu Chromebook
+                driver.execute_script("""
+                    arguments[0].innerText = arguments[1];
+                    arguments[0].dispatchEvent(new Event('input', { bubbles: true }));
+                """, editor, texto_aula)
+                
+                # 3. "Acordar" o site
+                # Enviamos apenas um ESPAÇO físico para garantir que o Gamma perceba a mudança
                 time.sleep(1)
+                editor.send_keys(" ") 
+                
+                print("       ✅ Texto colado com sucesso!")
+
             except Exception as e:
-                print(f"      ❌ Erro no Passo 3: {e}")
+                print(f"       ❌ Erro no Passo 3: {e}")            
 
             # ---------------------------------------------------------
             # PASSO EXTRA: GERAR
