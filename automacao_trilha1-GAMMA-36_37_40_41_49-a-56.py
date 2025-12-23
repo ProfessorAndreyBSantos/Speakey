@@ -1717,13 +1717,13 @@ def run_automation():
                 time.sleep(3)
             
             # ---------------------------------------------------------
-            # PASSO 1: CLICAR EM "RECOMBINAR UM MODELO"
-            # Classe: css-x01ui3 | Texto: "Recombinar um modelo"
+            # PASSO 1: CLICAR EM "Preencha e personalize um modelo estruturado"
+            # Classe: css-x01ui3 | Texto: "Preencha e personalize um modelo estruturado"
             # ---------------------------------------------------------
             print("   📍 Passo 1: Procurando 'Recombinar um modelo'...")
             try:
                 # Tenta primeiro pelo TEXTO (Mais seguro e humano)
-                botao_recombinar = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Recombinar um modelo')]")))
+                botao_recombinar = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Preencha e personalize um modelo estruturado')]")))
                 botao_recombinar.click()
                 print("      ✅ Cliquei pelo Texto!")
             except:
@@ -1820,3 +1820,4 @@ def run_automation():
 
 if __name__ == "__main__":
     run_automation()
+
