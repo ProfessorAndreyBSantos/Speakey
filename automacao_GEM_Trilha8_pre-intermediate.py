@@ -22,9 +22,126 @@ CAMINHO_PERFIL_ROBO = os.path.join(os.getcwd(), "chromebook_profile")
 URL_ALVO = "https://gemini.google.com/app"
 
 # --- SEUS TEXTOS (INSIRA AQUI O CONTEÚDO SEPARADO POR ###) ---
-lista_conteudos = 
-"""
-
+lista_conteudos = """
+8. Social English;Basic;01;Greetings & Farewells;Cumprimentar e se despedir informalmente.
+###
+8. Social English;Basic;02;"How are you?" Variations;Responder além do "I'm fine".
+###
+8. Social English;Basic;03;Introducing Yourself (Social);Dizer nome, idade e origem.
+###
+8. Social English;Basic;04;Immediate Family: Parents;Falar sobre pai e mãe.
+###
+8. Social English;Basic;05;Immediate Family: Siblings;Falar sobre irmãos e irmãs.
+###
+8. Social English;Basic;06;Immediate Family: Children;Falar sobre filhos.
+###
+8. Social English;Basic;07;Extended Family: Grandparents;Falar sobre avós.
+###
+8. Social English;Basic;08;Extended Family: Relatives;Falar sobre tios, tias e primos.
+###
+8. Social English;Basic;09;Marital Status;Dizer se é solteiro, casado ou divorciado.
+###
+8. Social English;Basic;10;Describing Appearance: Height/Weight;Usar adjetivos simples (Tall, Short).
+###
+8. Social English;Basic;11;Describing Appearance: Hair/Eyes;Descrever cor de cabelo e olhos.
+###
+8. Social English;Basic;12;Describing Personality: Positive;Usar adjetivos como Funny, Nice.
+###
+8. Social English;Basic;13;Describing Personality: Negative;Usar adjetivos como Shy, Lazy.
+###
+8. Social English;Basic;14;"How old are they?";Falar a idade de familiares.
+###
+8. Social English;Basic;15;Review: My Family Tree;Áudio consolidado: Apresentar 3 membros da família.
+###
+8. Social English;Basic;16;Days of the Week;Pronunciar corretamente de Monday a Sunday.
+###
+8. Social English;Basic;17;Parts of the Day;Morning, Afternoon, Evening, Night.
+###
+8. Social English;Basic;18;Telling Time: O'clock / Half past;Dizer as horas de forma simples.
+###
+8. Social English;Basic;19;Morning Routine verbs;Wake up, Get up, Shower.
+###
+8. Social English;Basic;20;Breakfast Vocabulary;Coffee, Bread, Eggs.
+###
+8. Social English;Basic;21;Commuting Verbs;Go to work, Drive, Take the bus.
+###
+8. Social English;Basic;22;Work/School Routine;Start work, Have lunch, Finish work.
+###
+8. Social English;Basic;23;Evening Routine verbs;Cook dinner, Watch TV.
+###
+8. Social English;Basic;24;Night Routine verbs;Go to bed, Sleep.
+###
+8. Social English;Basic;25;Weekends vs Weekdays;Diferenciar o que faz na semana e no fim de semana.
+###
+8. Social English;Basic;26;Frequency: Always / Usually;Dizer o que faz sempre ou geralmente.
+###
+8. Social English;Basic;27;Frequency: Sometimes / Never;Dizer o que faz às vezes ou nunca.
+###
+8. Social English;Basic;28;Connectors: Before / After;Organizar a sequência.
+###
+8. Social English;Basic;29;Connectors: Then / And then;Conectar ações.
+###
+8. Social English;Basic;30;Review: My Daily Routine;Áudio consolidado: Narrar sua rotina completa.
+###
+8. Social English;Basic;31;My House: Type;House vs Apartment.
+###
+8. Social English;Basic;32;Rooms: Living Room;Sofa, TV, Carpet.
+###
+8. Social English;Basic;33;Rooms: Kitchen;Fridge, Stove, Table.
+###
+8. Social English;Basic;34;Rooms: Bedroom;Bed, Wardrobe, Lamp.
+###
+8. Social English;Basic;35;Rooms: Bathroom;Shower, Toilet, Sink.
+###
+8. Social English;Basic;36;Prepositions of Place;In, On, Under, Next to.
+###
+8. Social English;Basic;37;Household Chores: Cleaning;Clean the house, Sweep.
+###
+8. Social English;Basic;38;Household Chores: Kitchen;Wash the dishes, Cook.
+###
+8. Social English;Basic;39;Household Chores: Laundry;Wash clothes, Iron.
+###
+8. Social English;Basic;40;"I have to..." (Obligation);Falar de deveres.
+###
+8. Social English;Basic;41;Food: Fruits & Vegetables;Vocabulário básico de feira.
+###
+8. Social English;Basic;42;Food: Meat & Carb;Chicken, Beef, Rice.
+###
+8. Social English;Basic;43;Meals of the Day;Breakfast, Lunch, Dinner.
+###
+8. Social English;Basic;44;"I am hungry / thirsty";Expressar necessidades físicas.
+###
+8. Social English;Basic;45;Review: My Home;Áudio consolidado: Descrever sua casa e comida.
+###
+8. Social English;Basic;46;Verb: Like / Don't like;Expressar gostos simples.
+###
+8. Social English;Basic;47;Verb: Love / Hate;Expressar gostos fortes.
+###
+8. Social English;Basic;48;Hobbies: Sports;Play soccer, Go to the gym.
+###
+8. Social English;Basic;49;Hobbies: Arts & Music;Listen to music, Watch movies.
+###
+8. Social English;Basic;50;"My favorite...";Falar sobre favoritos.
+###
+8. Social English;Basic;51;Weather: Hot / Cold;Descrever a temperatura.
+###
+8. Social English;Basic;52;Weather: Sunny / Rainy;Descrever o estado do céu.
+###
+8. Social English;Basic;53;Seasons of the Year;Summer, Winter, Fall, Spring.
+###
+8. Social English;Basic;54;Clothes: Summer;T-shirt, Shorts, Sandals.
+###
+8. Social English;Basic;55;Clothes: Winter;Coat, Jeans, Boots.
+###
+8. Social English;Basic;56;"I am wearing...";Descrever o que está vestindo.
+###
+8. Social English;Basic;57;Colors;Red, Blue, Green, Black.
+###
+8. Social English;Basic;58;Numbers: Age & Price;Revisão de números em contexto social.
+###
+8. Social English;Basic;59;Pets;Dog, Cat, Bird.
+###
+8. Social English;Basic;60;Final Review: Who Am I?;Áudio consolidado: Apresentação completa.
 """
 
 # Separa os blocos e remove vazios
@@ -126,4 +243,5 @@ def run_automation():
     print("\n✅ Automação Finalizada!")
 
 if __name__ == "__main__":
+
     run_automation()
